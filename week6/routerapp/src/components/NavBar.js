@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./NavBar.css";
 
@@ -9,10 +10,10 @@ const NavBar = ({ basketNumber }) => {
       <h1>My Shop</h1>
       <ul>
         <li>
-          <a href="#">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="#">About</a>
+          <Link to="/About">About</Link>
         </li>
         <li>
           Cart: <span>{basketNumber}</span>
