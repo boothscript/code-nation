@@ -1,0 +1,14 @@
+.home {
+  background-color: rgb(240, 240, 240);
+  text-align: center;
+  height: 80vh;
+}
+
+.productCardWrapper {
+  box-sizing: border-box;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  padding: 20px;
+}
