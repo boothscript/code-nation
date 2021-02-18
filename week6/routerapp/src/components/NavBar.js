@@ -1,7 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 
-const NavBar = () => {
+import "./NavBar.css";
+
+const NavBar = ({ basketNumber }) => {
   return (
     <nav>
       <h1>My Shop</h1>
@@ -13,7 +15,7 @@ const NavBar = () => {
           <a href="#">About</a>
         </li>
         <li>
-          Cart: <span>0</span>
+          Cart: <span>{basketNumber}</span>
         </li>
       </ul>
     </nav>
