@@ -3,6 +3,7 @@ const hbs = require("express-handlebars");
 const path = require("path");
 
 const getPerson = require("./lib/person");
+const getPlaceholder = require("./lib/placeholder");
 
 const app = express();
 
@@ -11,10 +12,11 @@ app.use(express.static(path.join(__dirname, "public")));
 app.engine("hbs", hbs({ extname: ".hbs", defaultLayout: "layout" }));
 app.set("view engine", ".hbs");
 
-app.get("/", (req, res) => {
-  const data = getPerson();
-
-  res.render("index", { data });
+app.get("/", async (req, res) => {
+  const personData = getPerson();
+  const peopleData = await getPlaceholder();
+  console.log(peopleData);
+  res.render("index", { personData, peopleData });
 });
 app.get("/about", (req, res) => {
   res.render("about");
