@@ -1,9 +1,12 @@
 const express = require("express");
 const hbs = require("express-handlebars");
+const path = require("path");
 
 const getPerson = require("./lib/person");
 
 const app = express();
+
+app.use(express.static(path.join(__dirname, "public")));
 
 app.engine("hbs", hbs({ extname: ".hbs", defaultLayout: "layout" }));
 app.set("view engine", ".hbs");
