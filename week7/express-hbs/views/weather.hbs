@@ -12,4 +12,18 @@
 </form>
 
 
+{{#if err}}
+<h2>{{err}}</h2>
+{{/if}}
+
+{{#if listExists}}
+<h2>weather in : {{name}}</h2>
+<ul>
+  {{#each data}}
+  <li>
+  {{@key}} : {{this}}
+  </li> 
+  {{/each}}
+</ul>
+{{/if}}
  
