@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "buildcss": "npx tailwindcss-cli@latest build .tailwind.css -o ./public/css/tailwind.css",
+    "buildcss": "npx tailwindcss-cli@latest build tailwind.css -o ./public/css/tailwind.css",
     "dev": "nodemon index.js"
   },
   "keywords": [],
