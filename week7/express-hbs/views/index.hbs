@@ -1,0 +1,15 @@
+<h1>
+  Todays Weather
+</h1>
+<p>{{weather.name}}: {{weather.main.temp}} C</p>
+
+<form action="/weather" method="POST">
+  <label for="city">city:</label>
+  <input type="text" name="city" />
+  <label for="code">code:</label>
+  <input type="text" name="code" />
+  <input type="submit" value="submit"></input>
+</form>
+
+
+ 
