@@ -14,3 +14,5 @@ const getForecast = async (city, code, units = "metric") => {
   ).then((response) => response.json());
   return result;
 };
+
+module.exports = { getForecast, getWeather };
